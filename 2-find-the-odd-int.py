@@ -24,4 +24,13 @@ Output: 10
 '''    
 
 def find_it(li):
-  pass
+  hash = { }
+  for number in li:
+    if number in hash:
+      hash[number] = hash[number] + 1
+    else:
+      hash[number] = 1
+  for number in hash:
+    if hash[number] % 2 != 0:
+      return number
+

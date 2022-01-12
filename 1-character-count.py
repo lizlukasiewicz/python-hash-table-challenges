@@ -29,4 +29,14 @@ the character d occurs 1 times
 '''
 
 def character_count(string):
-  pass
+  hash_table = { }
+  for letter in string:
+    if letter in hash_table:
+      hash_table[letter] = hash_table[letter] +1
+    else:
+      hash_table[letter] = 1
+  for letter in hash_table:
+    print(f'the character {letter} occours {hash_table[letter]} times')
+
+character_count('banana')
+    
